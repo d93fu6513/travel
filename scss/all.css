@@ -374,6 +374,12 @@ body {
   width: 380px;
 }
 
+@media (max-width: 576px) {
+  .blog-box {
+    padding: 0 0 10px 0;
+  }
+}
+
 .blog-box h2 {
   font-size: 36px;
   color: #EBB445;
@@ -607,11 +613,17 @@ body {
 
 .view-box {
   width: 380px;
-  margin: 10px 10px;
+  margin: 0 10px 10px 0;
   -webkit-box-shadow: 0 0 10px #8FA8B3;
           box-shadow: 0 0 10px #8FA8B3;
   overflow: hidden;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .view-box {
+    margin: 0 0 10px 0;
+  }
 }
 
 .view-box h2 {
@@ -811,6 +823,12 @@ body {
   padding: 50px 0;
 }
 
+@media (max-width: 576px) {
+  .breadcrumb {
+    padding: 5px;
+  }
+}
+
 .breadcrumb .container {
   width: 100%;
   max-width: 1200px;
@@ -834,20 +852,40 @@ body {
   padding-bottom: 30px;
 }
 
+@media (max-width: 576px) {
+  .breadcrumb .container .title {
+    padding: 30px 0;
+  }
+}
+
 .breadcrumb .container .breadcrumb-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 30px;
 }
 
+@media (max-width: 576px) {
+  .breadcrumb .container .breadcrumb-box {
+    padding-bottom: 0px;
+  }
+}
+
 .breadcrumb .container .breadcrumb-box li {
-  padding-right: 20px;
+  padding-bottom: 10px;
 }
 
 .breadcrumb .container .breadcrumb-box li + li:before {
   content: '>';
-  margin-right: 20px;
+  margin: 0 20px;
+}
+
+@media (max-width: 576px) {
+  .breadcrumb .container .breadcrumb-box li + li:before {
+    margin: 0 10px;
+  }
 }
 
 .breadcrumb .container .breadcrumb-box li:last-child a {
@@ -901,6 +939,13 @@ body {
   margin-right: 50px;
 }
 
+@media (max-width: 576px) {
+  .blog-container {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
 .blog-container .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -916,6 +961,18 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 30px;
+}
+
+.blog-container .title .top img {
+  border-radius: 50%;
+  width: 10%;
+}
+
+@media (max-width: 576px) {
+  .blog-container .title .top img {
+    margin: auto;
+    width: 30%;
+  }
 }
 
 .blog-container .title .top .txt {
@@ -948,11 +1005,74 @@ body {
   color: #EBB445;
 }
 
+.blog-container .title .blog-txt {
+  padding: 0 30px;
+}
+
+@media (max-width: 576px) {
+  .blog-container .title .blog-txt {
+    padding: 0 10px;
+  }
+}
+
+.blog-container .title .blog-txt h2 {
+  padding-top: 10px;
+}
+
+.blog-container .title .blog-txt h5 {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.blog-container .title .blog-txt p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .blog-container .title .txt {
   padding: 0 30px;
 }
 
+@media (max-width: 576px) {
+  .blog-container .title .txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 10px;
+  }
+}
+
 .blog-container .title .txt .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 576px) {
+  .blog-container .title .txt .photo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.blog-container .title .txt .photo img {
+  padding-right: 10px;
+}
+
+@media (max-width: 576px) {
+  .blog-container .title .txt .photo img {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+
+.blog-container .title .txt .photo .map {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -979,10 +1099,24 @@ body {
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 576px) {
+  .blog-list {
+    margin: auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
 .blog-list h2 {
   font-size: 28px;
   padding: 20px 10px;
   position: relative;
+}
+
+@media (max-width: 576px) {
+  .blog-list h2 {
+    padding: 20px 0px;
+  }
 }
 
 .blog-list h2:after {
@@ -996,6 +1130,13 @@ body {
   transition: 0.3s;
 }
 
+@media (max-width: 576px) {
+  .blog-list h2:after {
+    left: 0px;
+    right: 0px;
+  }
+}
+
 .blog-list li {
   padding-bottom: 20px;
 }
@@ -1005,6 +1146,12 @@ body {
   padding: 0 10px;
   color: #406D80;
   font-size: 18px;
+}
+
+@media (max-width: 576px) {
+  .blog-list a {
+    padding: 0;
+  }
 }
 
 .blog-list a i {

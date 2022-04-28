@@ -19,20 +19,28 @@
 </head>
 <body>
     <div class="back-top hide"><a href="#"><i class="bi bi-arrow-up-circle"></i></a></div>
+    <input type="checkbox" id="header-control">
     <div class="header">
+        <label for="header-control" class="header-btn"><i class="bi bi-list"></i></label>
+        <div class="header-logo"><a href="/index.html">FlyFan</a></div>
         <div class="container">
-            <div class="header-logo"><a href="/index.html">FlyFan</a></div>
             <div class="nav">
                 <a href="/blog.html"><i class="bi bi-pencil"></i>旅遊紀錄</a>
                 <a href="/view.html"><i class="bi bi-camera"></i>私藏景點</a>
-                <a href="/index.html#about"><i class="bi bi-person"></i>自我介紹</a>
-            </div>
-            <form class="header-search">
-                <input type="search" >
-                <button><i class="bi bi-search"></i></button>
-            </form>
+                <a href="#about"><i class="bi bi-person"></i>自我介紹</a>
+                <label for="search-control" class="search-btn"><i class="bi bi-search"></i>全站搜尋</label>
+                <div class="search">
+                    <input type="checkbox" id="search-control">
+                    <div class="search-nav">
+                            <form class="header-search">
+                            <input type="search" >
+                            <button><i class="bi bi-search"></i></button>
+                        </form> 
+                    </div> 
+                </div>    
+            </div>      
         </div>
-    </div>
+    </div>    
     <div class="breadcrumb">
         <div class="container">
             <div class="title"><i class="bi bi-pencil"></i>旅遊紀錄</div>
@@ -46,24 +54,22 @@
                 <div class="blog-container">
                     <div class="title">
                         <div class="top">
-                            <img src="/images/photo.png" alt="" style="border-radius: 50%; width: 10%;">
+                            <img src="/images/photo.png" alt="">
                             <div class="txt">
                                 <h3>FlyFan</h3>
                                 <h4><i class="bi bi-geo-alt"></i>札幌市</h4>
                             </div>
                         </div>
-                        <div class="txt">
-                            <div class="photo">
-                                <div class="swiper mySwiper">
-                                    <div class="swiper-wrapper">
-                                      <div class="swiper-slide"><img src="images/view1.png" alt="" width="100%"></div>
-                                      <div class="swiper-slide"><img src="images/view1-1.png" alt="" width="100%"></div>
-                                      <div class="swiper-slide"><img src="images/view1-2.png" alt="" width="100%"></div>
-                                      <div class="swiper-slide"><img src="images/view1-3.png" alt="" width="100%"></div>
-                                      </div>
-                                    <div class="swiper-pagination"></div>
-                                  </div>
-                            </div>                            
+                        <div class="blog-txt">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/view1.png" alt="" width="100%"></div>
+                                    <div class="swiper-slide"><img src="images/view1-1.png" alt="" width="100%"></div>
+                                    <div class="swiper-slide"><img src="images/view1-2.png" alt="" width="100%"></div>
+                                    <div class="swiper-slide"><img src="images/view1-3.png" alt="" width="100%"></div>
+                                    </div>
+                                <div class="swiper-pagination"></div>
+                            </div>                     
                             <h2>Day1：台灣→札幌</h2>
                             <h5>2020/02/10</h5>
                             <p>札幌市是位於日本北海道道央地區的都市，為北海道首府以及石狩振興局本部所在地，也是政令指定都市之一。札幌市是位於日本北海道道央地區的都市，為北海道首府以及石狩振興局本部所在地，也是政令指定都市之一。</p>

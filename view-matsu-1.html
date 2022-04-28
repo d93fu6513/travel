@@ -19,20 +19,28 @@
 </head>
 <body>
     <div class="back-top hide"><a href="#"><i class="bi bi-arrow-up-circle"></i></a></div>
+    <input type="checkbox" id="header-control">
     <div class="header">
+        <label for="header-control" class="header-btn"><i class="bi bi-list"></i></label>
+        <div class="header-logo"><a href="/index.html">FlyFan</a></div>
         <div class="container">
-            <div class="header-logo"><a href="/index.html">FlyFan</a></div>
             <div class="nav">
                 <a href="/blog.html"><i class="bi bi-pencil"></i>旅遊紀錄</a>
                 <a href="/view.html"><i class="bi bi-camera"></i>私藏景點</a>
-                <a href="/index.html#about"><i class="bi bi-person"></i>自我介紹</a>
-            </div>
-            <form class="header-search">
-                <input type="search" >
-                <button><i class="bi bi-search"></i></button>
-            </form>
+                <a href="#about"><i class="bi bi-person"></i>自我介紹</a>
+                <label for="search-control" class="search-btn"><i class="bi bi-search"></i>全站搜尋</label>
+                <div class="search">
+                    <input type="checkbox" id="search-control">
+                    <div class="search-nav">
+                            <form class="header-search">
+                            <input type="search" >
+                            <button><i class="bi bi-search"></i></button>
+                        </form> 
+                    </div> 
+                </div>    
+            </div>      
         </div>
-    </div>
+    </div>    
     <div class="breadcrumb">
         <div class="container">
             <div class="title"><i class="bi bi-pencil"></i>旅遊紀錄</div>
@@ -45,7 +53,7 @@
                 <div class="blog-container">
                     <div class="title">
                         <div class="top">
-                            <img src="/images/photo.png" alt="" style="border-radius: 50%; width: 10%;">
+                            <img src="/images/photo.png" alt="">
                             <div class="txt">
                                 <h3>FlyFan</h3>
                                 <h4><a href="https://goo.gl/maps/tU1AaSzXeYHbiVYq6"><i class="bi bi-geo-alt"></i>東引鄉</a></h4>
@@ -54,7 +62,9 @@
                         <div class="txt">
                             <div class="photo">
                                 <img src="images/blog2.png" alt="">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5055.438067105952!2d120.49056127340505!3d26.367446775733537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3443ecf3ecb575c9%3A0x78c4d1227d42f9d3!2zNy1FTEVWRU4g5p2x5byV6ZaA5biC!5e0!3m2!1szh-TW!2stw!4v1651149187843!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+                                <div class="map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5055.438067105952!2d120.49056127340505!3d26.367446775733537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3443ecf3ecb575c9%3A0x78c4d1227d42f9d3!2zNy1FTEVWRU4g5p2x5byV6ZaA5biC!5e0!3m2!1szh-TW!2stw!4v1651149187843!5m2!1szh-TW!2stw" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
                             </div>                            
                             <h2>東引鄉</h2>
                             <h5><i class="bi bi-geo-alt"></i>連江縣東引鄉中柳村85號</h5>
