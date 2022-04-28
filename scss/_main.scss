@@ -32,21 +32,34 @@ body {
     transform: translateY(200%);
 }
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;  
     top: 0px;
     z-index: 999; 
     width: 100%;
+    height: 120px;
     background-color: $white-color;
     box-shadow: 0 0 10px $lightbrand-color;
+    @include mobile {
+        height: 70px;
+    }
 }
 .header .container {
     display: flex;
-    margin: auto;
-    padding: 30px 50px;
-    align-items: center;
+    @include mobile {
+        display: flex;
+        margin: auto;
+        padding: 0;
+    }
 }
 .header-logo {
     display: flex;
+    padding-left: 40px;
+    @include mobile {
+        align-items: center;
+    }
     a {
         background-image: url(../images/logo.png);
         width: 183px;
@@ -60,16 +73,32 @@ body {
     display: flex;
     font-size: $font-m;
     font-weight: 600;
-    margin: auto;
-    a {
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 70%;
+        height: 100vh;
+        text-align: center;
+        transition: .5s;
+    }
+    a,.search-btn {
         color: $brand-color;
         padding: 0 30px;
         text-decoration: none;
-        position: relative;
         transform: translateY(0);
         transition: 0.3s;
+        @include mobile {
+            padding: 20px;
+        }
             &:hover {
                 transform: translateY(-10px);
+                @include mobile {
+                    transform: none;
+                }
             }
             &:after {
                 content: '';
@@ -79,6 +108,9 @@ body {
                 bottom: -10px;
                 border-bottom: 5px solid $brand-color;
                 transition: 0.3s;
+                @include mobile {
+                    border-bottom: none;
+                }
             }
             &:hover:after {
                 left: 0;
@@ -86,10 +118,46 @@ body {
             }
     }
 }
+.header-btn {
+    display: none;
+    @include mobile {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: $brand-color;
+        font-size: $font-l;
+    }
+}
+#header-control {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+
+    &:checked ~ .header .container .nav {
+        left: 0;
+    }
+}
+.search-nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    height: 50px;
+    transition: .3s;
+    opacity: 0;
+}
+#search-control {
+    opacity: 0;
+
+    &:checked ~ .search-nav {
+        opacity: 1;
+    }
+}
 .header-search{
     display: flex;
+    padding: 10px;
     button {
-        display: flex;
         border-radius: 0 200px 200px 0;
         &:hover > i{
             color: $white-color;
@@ -97,6 +165,7 @@ body {
     }
     input {
         border-radius: 200px 0 0 200px;
+        width: 180px;
         &:focus {
             outline: none;
         }
@@ -108,9 +177,15 @@ body {
     padding: 5px 10px;
     color: $brand-color;
     font-size: $font-s;
+    @include mobile {
+        font-size: $font-m;
+    }
 }
 .blog {
     padding: 50px 0;
+    @include mobile {
+        padding: 20px 0;
+    }
     .container {
         width: 100%;
         max-width: 1200px;
@@ -147,7 +222,6 @@ body {
             font-size: $font-l;
             color: $orange-color;
             font-weight: 700;
-            transform: translateY(0);
         }
         p {
             font-size: $font-s;
@@ -257,6 +331,9 @@ body {
         font-size: $font-l;
         font-weight: 700;
         padding-bottom: 30px;
+    @include mobile {
+        padding-bottom: 10px;
+    }
     }
     .wrap {
         display: flex;
@@ -280,6 +357,10 @@ body {
         padding: 20px 50px;
         font-size: $font-m;
         transition: .5s;
+        @include mobile {
+            font-size: $font-s;
+            padding: 10px;
+        }
         &:hover {
             background-color: $brand-color;
             color: $white-color;

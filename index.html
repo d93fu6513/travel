@@ -19,20 +19,28 @@
 </head>
 <body>
     <div class="back-top hide"><a href="#"><i class="bi bi-arrow-up-circle"></i></a></div>
+    <input type="checkbox" id="header-control">
     <div class="header">
+        <label for="header-control" class="header-btn"><i class="bi bi-list"></i></label>
+        <div class="header-logo"><a href="/index.html">FlyFan</a></div>
         <div class="container">
-            <div class="header-logo"><a href="/index.html">FlyFan</a></div>
             <div class="nav">
                 <a href="/blog.html"><i class="bi bi-pencil"></i>旅遊紀錄</a>
                 <a href="/view.html"><i class="bi bi-camera"></i>私藏景點</a>
                 <a href="#about"><i class="bi bi-person"></i>自我介紹</a>
-            </div>
-            <form class="header-search">
-                <input type="search" >
-                <button><i class="bi bi-search"></i></button>
-            </form>
+                <label for="search-control" class="search-btn"><i class="bi bi-search"></i>全站搜尋</label>
+                <div class="search">
+                    <input type="checkbox" id="search-control">
+                    <div class="search-nav">
+                            <form class="header-search">
+                            <input type="search" >
+                            <button><i class="bi bi-search"></i></button>
+                        </form> 
+                    </div> 
+                </div>    
+            </div>      
         </div>
-    </div>
+    </div>    
     <div class="banner">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
