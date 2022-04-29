@@ -368,6 +368,12 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 576px) {
+  .wrap {
+    padding: 0 10px;
+  }
+}
+
 .blog-box {
   padding: 0 10px;
   text-align: center;

@@ -204,6 +204,9 @@ body {
 .wrap {
     display: flex;
     flex-wrap: wrap;
+    @include mobile {
+        padding: 0 10px;
+    }
 }
 .blog-box {
     padding: 0 10px;
