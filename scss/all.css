@@ -1076,6 +1076,13 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 430px;
+}
+
+@media (max-width: 576px) {
+  .blog-container .title .txt .photo .map {
+    width: 100%;
+  }
 }
 
 .blog-container .title .txt h2 {

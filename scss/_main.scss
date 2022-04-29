@@ -669,6 +669,10 @@ body {
                 }
                 .map {
                     display: flex;
+                    width: 430px;
+                    @include mobile {
+                        width: 100%;
+                    }
                 }
             }
             h2 {
