@@ -1092,17 +1092,21 @@ body {
 }
 
 .blog-container .title .txt h2 {
+  font-size: 36px;
   padding-top: 10px;
 }
 
 .blog-container .title .txt h5 {
-  font-size: 18px;
+  font-size: 14px;
+  color: #3d3d3d;
   padding: 10px 0;
+  font-weight: 100;
 }
 
 .blog-container .title .txt p {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 32px;
+  font-weight: 500;
 }
 
 .blog-list {

@@ -679,15 +679,19 @@ body {
                 }
             }
             h2 {
+                font-size: $font-l;
                 padding-top: 10px;
             }
             h5 {
-                font-size: $font-s;
+                font-size: $font-xs;
+                color: $black-color;
                 padding: 10px 0;
+                font-weight: 100;
             }
             p {
                 font-size: $font-s;
-                line-height: 24px;
+                line-height: 32px;
+                font-weight: 500;
             }
         }
     }
