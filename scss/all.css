@@ -259,11 +259,48 @@ body {
 #header-control {
   position: absolute;
   top: 0;
-  opacity: 1;
+  display: none;
 }
 
-#header-control:checked ~ .header .container .nav {
+#header-control:checked ~ .container .nav {
   left: 0;
+}
+
+#header-control:checked + .header-btn span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 4px;
+}
+
+#header-control:checked + .header-btn span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: -4px;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 7px;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 1px;
+  background-color: #406D80;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.hamburger-icon span:nth-child(2) {
+  margin-top: 7px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  margin-top: 7px;
 }
 
 .search-nav {

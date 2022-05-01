@@ -132,11 +132,39 @@ body {
 #header-control {
     position: absolute;
     top: 0;
-    opacity: 1;
-
-    &:checked ~ .header .container .nav {
+    display: none;
+    &:checked ~ .container .nav {
         left: 0;
     }
+    &:checked + .header-btn span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 4px;
+    }
+    &:checked + .header-btn span:nth-child(2) {
+        transform: rotate(-45deg);
+        top: -4px;
+    }
+}
+.hamburger-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 7px;
+    span {
+        display: block;
+        height: 1px;
+        background-color: $brand-color;
+        position: relative;
+        transition: .3s;
+        &:nth-child(2) {
+            margin-top: 7px;
+        }
+        &:nth-child(3) {
+            margin-top: 7px;
+        }
+    }
+    
 }
 .search-nav {
     display: flex;
