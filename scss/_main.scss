@@ -399,6 +399,10 @@ body {
             background-color: $brand-color;
             color: $white-color;
         }
+        &:focus {
+            background-color: $brand-color;
+                color: $white-color;
+        }
     }
 }
 .view-box {
@@ -486,23 +490,43 @@ body {
         padding-bottom: 30px;
     }
     .wrap {
-        display: flex;
+        position: relative;
+        height: 600px;
     }
 }
-.about-box {
-    padding: 0 10px;
-    text-align: center;
-    h2 {
-        font-size: $font-l;
-        color: $orange-color;
-        font-weight: 700;
-        padding: 20px 0;
+.about-box:hover {
+    .front-box {
+        transform: perspective(1000px) rotateY(-180deg);
     }
-    .box {
-        position: relative;
-        box-shadow: 0 0 10px $lightbrand-color;
+    .back-box {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+.front-box, .back-box{
+    backface-visibility: hidden;
+    transition: 1s;
+}
+.front-box {
+    position: absolute;
+    box-shadow: 0 0 10px #353E41;
+    transform: perspective(1000px) rotateY(0deg);
+    img {
+        vertical-align: middle;
+    }
+}
+.back-box {
+        width: 1200px;
+        height: 600px;
+        background-color: #353E41;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px #353E41;
+        transform: perspective(1000px) rotateY(180deg);
         h2 {
-            font-size: $font-l;
+            font-size: $font-xl;
             color: $orange-color;
             font-weight: 700;
         }
@@ -511,34 +535,27 @@ body {
             color: $white-color;
             font-weight: 100;
             font-family: $font-family-eg;
+            padding: 10px 0;
         }
+        .txt {
+            transition: .6s;
         a {
-            color: $orange-color;
+            display: inline-flex;
+            color: $white-color;
             text-decoration: none;
-            border: $orange-color 1px solid;
-        }
-        &:hover .txt {
-            opacity: 1;
+            font-size: $font-m;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            &:hover {
+                color: #353E41;
+                background-color: $orange-color;
+                
+            }
         }
     }
-}
-.about-box .box img {
-    width: 100%;
-    vertical-align: middle;
-}
-.about-box .txt {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba($color: #000000, $alpha: .3);
-    opacity: 0;
-    transition: .6s;
 }
 .footer {
     background-color: $brand-color;
