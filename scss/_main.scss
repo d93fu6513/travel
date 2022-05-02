@@ -391,6 +391,21 @@ body {
         padding: 20px 50px;
         font-size: $font-m;
         transition: .5s;
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 20px 0 20px;
+            border-color: $brand-color transparent transparent transparent;
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            opacity: 0;
+            transition: .3s;
+        }
         @include mobile {
             font-size: $font-s;
             padding: 10px;
@@ -398,10 +413,9 @@ body {
         &:hover {
             background-color: $brand-color;
             color: $white-color;
-        }
-        &:focus {
-            background-color: $brand-color;
-                color: $white-color;
+            &:after {
+            opacity: 1;
+            }
         }
     }
 }
