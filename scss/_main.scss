@@ -320,7 +320,7 @@ body {
 }
 .banner2 {
     background-image: url(../images/banner2-1.png);
-    height: 400px;
+    height: 450px;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -328,6 +328,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
     h3 {
         font-size: $font-l;
         color: $brand-color;
@@ -352,7 +353,6 @@ body {
     }
 }
 .view {
-    padding: 50px 0;
     .container {
         width: 100%;
         max-width: 1200px;
@@ -484,7 +484,7 @@ input[type="radio"]{
 }
 .banner3 {
     background-image: url(../images/banner3-1.png);
-    height: 400px;
+    height: 450px;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -492,6 +492,7 @@ input[type="radio"]{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     h3 {
         font-size: $font-l;
         color: $brand-color;
@@ -604,9 +605,10 @@ input[type="radio"]{
     padding: 50px 0;
     color: $white-color;
     text-align: center;
+    margin-top: 50px;
 }
 .breadcrumb {
-    padding: 50px 0;
+    padding-top: 50px;
     @include mobile {
         padding: 5px;
     }

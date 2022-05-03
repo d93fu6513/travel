@@ -527,7 +527,7 @@ body {
 
 .banner2 {
   background-image: url(../images/banner2-1.png);
-  height: 400px;
+  height: 450px;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -544,6 +544,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 50px;
 }
 
 .banner2 h3 {
@@ -575,10 +576,6 @@ body {
 .banner2 a:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-}
-
-.view {
-  padding: 50px 0;
 }
 
 .view .container {
@@ -756,7 +753,7 @@ input[type="radio"] {
 
 .banner3 {
   background-image: url(../images/banner3-1.png);
-  height: 400px;
+  height: 450px;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -773,6 +770,7 @@ input[type="radio"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 50px;
 }
 
 .banner3 h3 {
@@ -938,10 +936,11 @@ input[type="radio"] {
   padding: 50px 0;
   color: #ffffff;
   text-align: center;
+  margin-top: 50px;
 }
 
 .breadcrumb {
-  padding: 50px 0;
+  padding-top: 50px;
 }
 
 @media (max-width: 576px) {
