@@ -64,6 +64,7 @@ html {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
 body {
@@ -609,12 +610,46 @@ body {
   }
 }
 
-.view .wrap {
+.view .taitung,
+.view .matsu,
+.view .chiayi,
+.view .hokkaido {
+  display: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#matsu:checked ~ .view .matsu,
+#taitung:checked ~ .view .taitung,
+#chiayi:checked ~ .view .chiayi,
+#hokkaido:checked ~ .view .hokkaido {
+  display: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  #matsu:checked ~ .view .matsu,
+  #taitung:checked ~ .view .taitung,
+  #chiayi:checked ~ .view .chiayi,
+  #hokkaido:checked ~ .view .hokkaido {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+#matsu:checked ~ .view .view-tab [for="matsu"],
+#taitung:checked ~ .view .view-tab [for="taitung"],
+#chiayi:checked ~ .view .view-tab [for="chiayi"],
+#hokkaido:checked ~ .view .view-tab [for="hokkaido"] {
+  background-color: #406D80;
+  color: #ffffff;
 }
 
 .view-tab {
@@ -626,12 +661,9 @@ body {
   margin: auto;
 }
 
-.view-tab li {
+.view-tab label {
   margin: 0 10px;
   position: relative;
-}
-
-.view-tab a {
   border: 1px solid #406D80;
   color: #406D80;
   text-decoration: none;
@@ -642,7 +674,7 @@ body {
   transition: .5s;
 }
 
-.view-tab a:after {
+.view-tab label:after {
   content: '';
   width: 0;
   height: 0;
@@ -650,7 +682,7 @@ body {
   border-width: 20px 20px 0 20px;
   border-color: #406D80 transparent transparent transparent;
   position: absolute;
-  bottom: -40px;
+  bottom: -20px;
   left: 0;
   right: 0;
   margin: auto;
@@ -660,18 +692,18 @@ body {
 }
 
 @media (max-width: 576px) {
-  .view-tab a {
+  .view-tab label {
     font-size: 18px;
     padding: 10px;
   }
 }
 
-.view-tab a:hover {
+.view-tab label:hover {
   background-color: #406D80;
   color: #ffffff;
 }
 
-.view-tab a:hover:after {
+.view-tab label:hover:after {
   opacity: 1;
 }
 
@@ -806,6 +838,10 @@ body {
   height: 600px;
 }
 
+.about .wrap .about-box {
+  width: 100%;
+}
+
 .about-box:hover .front-box {
   -webkit-transform: perspective(1000px) rotateY(-180deg);
           transform: perspective(1000px) rotateY(-180deg);
@@ -831,13 +867,9 @@ body {
           transform: perspective(1000px) rotateY(0deg);
 }
 
-.front-box img {
-  vertical-align: middle;
-}
-
 .back-box {
-  width: 1200px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   background-color: #353E41;
   position: absolute;
   display: -webkit-box;

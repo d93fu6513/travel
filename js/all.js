@@ -12,15 +12,15 @@
     });
 
     //tab切換
-    $(function(){
-        var $li = $('ul.view-tab li');
-            $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.wrap').hide();
+    //$(function(){
+        // var $li = $('ul.view-tab li');
+        //     $($li. eq(0) .addClass('active').find('a').attr('href')).siblings('.wrap').hide();
         
-            $li.click(function(){
-                $($(this).find('a'). attr ('href')).show().siblings ('.wrap').hide();
-                $(this).addClass('active'). siblings ('.active').removeClass('active');
-            });
-        });
+        //     $li.click(function(){
+        //         $($(this).find('a'). attr ('href')).show().siblings ('.wrap').hide();
+        //         $(this).addClass('active'). siblings ('.active').removeClass('active');
+        //     });
+        // });
     
     //回到最上面    
     $(document).ready(function () {
